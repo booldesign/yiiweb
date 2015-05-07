@@ -15,8 +15,8 @@ class UserController extends Controller
 				}
 			}
 		}
-		p($_POST);
-		$this->render('passwd',array('userModel',$userModel));
+
+		$this->render('passwd',array('userModel'=>$userModel));
 	}
 
 

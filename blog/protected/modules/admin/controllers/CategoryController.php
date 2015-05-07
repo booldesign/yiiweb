@@ -5,7 +5,9 @@ class CategoryController extends Controller
 	public function actionIndex()
 	{
 		$categoryModel = Category::model();
-		$this->render('index',array('categoryModel',$categoryModel));
+		$categoryInfo = $categoryModel->findAllBySql("select cid,cname from {{category}}");
+
+		$this->render('index',array('categoryInfo'=>$categoryInfo));
 	}
 
 	public function actionAdd(){
@@ -18,7 +20,7 @@ class CategoryController extends Controller
 				$this->redirect('index');
 			}
 		}
-		$this->render('add',array('categoryModel',$categoryModel));
+		$this->render('add',array('categoryModel'=>$categoryModel));
 	}
 
 

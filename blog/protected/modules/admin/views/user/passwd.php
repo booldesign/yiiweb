@@ -26,14 +26,17 @@
 			<tr>
 				<td>原始密码：</td>
 				<td><?php echo $form->passwordField($userModel,'password'); ?></td>
+				<?php echo $form->error($userModel, 'password') ?>
 			</tr>
 			<tr>
 				<td>新密码：</td>
 				<td><?php echo $form->passwordField($userModel,'password1') ?></td>
+				<?php echo $form->error($userModel, 'password1') ?>
 			</tr>
 			<tr>
 				<td>确认密码：</td>
 				<td><?php echo $form->passwordField($userModel,'password2') ?></td>
+				<?php echo $form->error($userModel, 'password2') ?>
 			</tr>
 			<tr>
 				<td colspan="2">
