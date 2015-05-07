@@ -6,4 +6,8 @@ class DefaultController extends Controller
 	{
 		$this->render('index');
 	}
+
+	public function actionCopy(){
+		$this->render('copy');
+	}
 }

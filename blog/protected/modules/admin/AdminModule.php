@@ -12,6 +12,9 @@ class AdminModule extends CWebModule
 			'admin.models.*',
 			'admin.components.*',
 		));
+		Yii::app()->setComponents(array(
+			'user' => array('stateKeyPrefix' => 'admin')
+		));
 	}
 
 	public function beforeControllerAction($controller, $action)

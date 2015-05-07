@@ -4,13 +4,16 @@ class LoginController extends Controller
 {
 	public function actionIndex()
 	{
-		$userInfo = User::model()->find('username=:name',array(':name'=>'admin'));
-		p($userInfo);die;
+		// $userInfo = User::model()->find('username=:name',array(':name'=>'admin'));
+		// p($userInfo->password);die;
 		$loginForm = new LoginForm();
+// print_r($_POST);die;
 		if(isset($_POST['LoginForm'])){
 			$loginForm->attributes = $_POST['LoginForm'];
-			if($loginFrom->validate()){
 
+			if($loginForm->validate() && $loginForm->login()){
+				Yii::app()->session['login'] = time();
+				$this->redirect(array('default/index'));
 			}
 		}
 		$this->render('index',array('loginForm'=>$loginForm));
@@ -37,5 +40,10 @@ class LoginController extends Controller
 				'class'=>'CViewAction',
 			),
 		);
+	}
+
+	public function actionOut(){
+		Yii::app()->user->logout();
+		$this->redirect(array('index'));
 	}
 }
