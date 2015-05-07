@@ -12,6 +12,9 @@
 			'validateOnSubmit'=>true,  //点击验证
 		),
 	)); ?>
+	<?php if(Yii::app()->user->hasFlash('success')){
+		echo Yii::app()->user->getFlash('success');
+	}?>
 		<table class="table">
 			<tr >
 				<td class="th" colspan="2">修改密码</td>

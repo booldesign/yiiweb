@@ -40,17 +40,12 @@
 				<div class="text">
 					<ul class="con">
 				        <li class="nav_u">
-				        	<a href="" class="pos">前台首页</a>				        	
-				        </li> 
-				    </ul>
-					<ul class="con">
-				        <li class="nav_u">
-				        	<a href="" class="pos">查看信息</a>				        	
+				        	<a href="<?php echo $this->createUrl('/')?>" target="_blank" class="pos">前台首页</a>				        	
 				        </li> 
 				    </ul>
 				    <ul class="con">
 				        <li class="nav_u">
-				        	<a href="" class="pos">系统信息</a>				        	
+				        	<a href="<?php echo $this->createUrl('copy')?>" class="pos">系统信息</a>				        	
 				        </li> 
 				    </ul>
 				    <ul class="con">
@@ -61,6 +56,21 @@
 				</div>
 			</div>	
 
+			<div class="menu_box">
+				<h2>栏目管理</h2>
+				<div class="text">
+				    <ul class="con">
+				        <li class="nav_u">
+				        	<a href="<?php echo $this->createUrl('category/index')?>" class="pos">查看栏目</a>				        	
+				        </li> 
+				    </ul>
+				    <ul class="con">
+				        <li class="nav_u">
+				        	<a href="<?php echo $this->createUrl('category/add') ?>" class="pos">添加栏目</a>				        	
+				        </li> 
+				    </ul>
+				</div>
+			</div>
 		</div>
 		<!-- 右侧 -->
 		<div id="right">
