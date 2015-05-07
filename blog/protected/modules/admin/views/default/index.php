@@ -36,6 +36,22 @@
 		<div id="left_box">
 			<p class="use">常用菜单</p>
 			<div class="menu_box">
+				<h2>文章管理</h2>
+				<div class="text">
+					<ul class="con">
+				        <li class="nav_u">
+				        	<a href="<?php echo $this->createUrl('article/index')?>" class="pos">文章列表</a>				        	
+				        </li> 
+				    </ul>
+				    <ul class="con">
+				        <li class="nav_u">
+				        	<a href="<?php echo $this->createUrl('article/add')?>" class="pos">发布文章</a>				        	
+				        </li> 
+				    </ul>
+				</div>
+			</div>	
+
+			<div class="menu_box">
 				<h2>常用菜单</h2>
 				<div class="text">
 					<ul class="con">
